@@ -1,0 +1,5250 @@
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    FILE *surowce, *produkcja, *towar;
+
+    //Otwarcie plików roboczych "surowce", "produkcja"
+    surowce = fopen("surowce", "r");
+    if (surowce == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    produkcja = fopen("produkcja", "w");
+    if (produkcja == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    //************************************************
+
+    char znak; int ilosc_znakow;
+    ilosc_znakow = 0;
+    znak = fgetc(surowce);
+    while(znak != EOF)
+    {
+        //Obsługa wczytanego znaku
+        ilosc_znakow++;
+        printf("%d : ASCII=%d\n", ilosc_znakow, znak);
+        //************************
+
+        //Zapis znaku do bufora
+        towar = fopen("towar", "w");
+        if (towar == NULL)
+        {
+            perror("fopen()");
+            exit(1);
+        }
+        fputc(znak, towar);
+        if (fclose(towar) == EOF)
+        {
+            perror("fclose()");
+            exit(1);
+        }
+        //*********************
+
+        //Dołączenie znaku do całkowitej produkcji (pliku "produkcja")
+        fputc(znak, produkcja);
+        //************************************************************
+
+        //Pobranie nowego znaku
+        znak = fgetc(surowce);
+        //*********************
+    }
+
+    if (fclose(surowce) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    if (fclose(produkcja) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    return 0;
+}
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    FILE *surowce, *produkcja, *towar;
+
+    //Otwarcie plików roboczych "surowce", "produkcja"
+    surowce = fopen("surowce", "r");
+    if (surowce == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    produkcja = fopen("produkcja", "w");
+    if (produkcja == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    //************************************************
+
+    char znak; int ilosc_znakow;
+    ilosc_znakow = 0;
+    znak = fgetc(surowce);
+    while(znak != EOF)
+    {
+        //Obsługa wczytanego znaku
+        ilosc_znakow++;
+        printf("%d : ASCII=%d\n", ilosc_znakow, znak);
+        //************************
+
+        //Zapis znaku do bufora
+        towar = fopen("towar", "w");
+        if (towar == NULL)
+        {
+            perror("fopen()");
+            exit(1);
+        }
+        fputc(znak, towar);
+        if (fclose(towar) == EOF)
+        {
+            perror("fclose()");
+            exit(1);
+        }
+        //*********************
+
+        //Dołączenie znaku do całkowitej produkcji (pliku "produkcja")
+        fputc(znak, produkcja);
+        //************************************************************
+
+        //Pobranie nowego znaku
+        znak = fgetc(surowce);
+        //*********************
+    }
+
+    if (fclose(surowce) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    if (fclose(produkcja) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    return 0;
+}
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    FILE *surowce, *produkcja, *towar;
+
+    //Otwarcie plików roboczych "surowce", "produkcja"
+    surowce = fopen("surowce", "r");
+    if (surowce == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    produkcja = fopen("produkcja", "w");
+    if (produkcja == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    //************************************************
+
+    char znak; int ilosc_znakow;
+    ilosc_znakow = 0;
+    znak = fgetc(surowce);
+    while(znak != EOF)
+    {
+        //Obsługa wczytanego znaku
+        ilosc_znakow++;
+        printf("%d : ASCII=%d\n", ilosc_znakow, znak);
+        //************************
+
+        //Zapis znaku do bufora
+        towar = fopen("towar", "w");
+        if (towar == NULL)
+        {
+            perror("fopen()");
+            exit(1);
+        }
+        fputc(znak, towar);
+        if (fclose(towar) == EOF)
+        {
+            perror("fclose()");
+            exit(1);
+        }
+        //*********************
+
+        //Dołączenie znaku do całkowitej produkcji (pliku "produkcja")
+        fputc(znak, produkcja);
+        //************************************************************
+
+        //Pobranie nowego znaku
+        znak = fgetc(surowce);
+        //*********************
+    }
+
+    if (fclose(surowce) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    if (fclose(produkcja) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    return 0;
+}
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    FILE *surowce, *produkcja, *towar;
+
+    //Otwarcie plików roboczych "surowce", "produkcja"
+    surowce = fopen("surowce", "r");
+    if (surowce == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    produkcja = fopen("produkcja", "w");
+    if (produkcja == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    //************************************************
+
+    char znak; int ilosc_znakow;
+    ilosc_znakow = 0;
+    znak = fgetc(surowce);
+    while(znak != EOF)
+    {
+        //Obsługa wczytanego znaku
+        ilosc_znakow++;
+        printf("%d : ASCII=%d\n", ilosc_znakow, znak);
+        //************************
+
+        //Zapis znaku do bufora
+        towar = fopen("towar", "w");
+        if (towar == NULL)
+        {
+            perror("fopen()");
+            exit(1);
+        }
+        fputc(znak, towar);
+        if (fclose(towar) == EOF)
+        {
+            perror("fclose()");
+            exit(1);
+        }
+        //*********************
+
+        //Dołączenie znaku do całkowitej produkcji (pliku "produkcja")
+        fputc(znak, produkcja);
+        //************************************************************
+
+        //Pobranie nowego znaku
+        znak = fgetc(surowce);
+        //*********************
+    }
+
+    if (fclose(surowce) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    if (fclose(produkcja) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    return 0;
+}
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    FILE *surowce, *produkcja, *towar;
+
+    //Otwarcie plików roboczych "surowce", "produkcja"
+    surowce = fopen("surowce", "r");
+    if (surowce == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    produkcja = fopen("produkcja", "w");
+    if (produkcja == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    //************************************************
+
+    char znak; int ilosc_znakow;
+    ilosc_znakow = 0;
+    znak = fgetc(surowce);
+    while(znak != EOF)
+    {
+        //Obsługa wczytanego znaku
+        ilosc_znakow++;
+        printf("%d : ASCII=%d\n", ilosc_znakow, znak);
+        //************************
+
+        //Zapis znaku do bufora
+        towar = fopen("towar", "w");
+        if (towar == NULL)
+        {
+            perror("fopen()");
+            exit(1);
+        }
+        fputc(znak, towar);
+        if (fclose(towar) == EOF)
+        {
+            perror("fclose()");
+            exit(1);
+        }
+        //*********************
+
+        //Dołączenie znaku do całkowitej produkcji (pliku "produkcja")
+        fputc(znak, produkcja);
+        //************************************************************
+
+        //Pobranie nowego znaku
+        znak = fgetc(surowce);
+        //*********************
+    }
+
+    if (fclose(surowce) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    if (fclose(produkcja) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    return 0;
+}
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    FILE *surowce, *produkcja, *towar;
+
+    //Otwarcie plików roboczych "surowce", "produkcja"
+    surowce = fopen("surowce", "r");
+    if (surowce == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    produkcja = fopen("produkcja", "w");
+    if (produkcja == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    //************************************************
+
+    char znak; int ilosc_znakow;
+    ilosc_znakow = 0;
+    znak = fgetc(surowce);
+    while(znak != EOF)
+    {
+        //Obsługa wczytanego znaku
+        ilosc_znakow++;
+        printf("%d : ASCII=%d\n", ilosc_znakow, znak);
+        //************************
+
+        //Zapis znaku do bufora
+        towar = fopen("towar", "w");
+        if (towar == NULL)
+        {
+            perror("fopen()");
+            exit(1);
+        }
+        fputc(znak, towar);
+        if (fclose(towar) == EOF)
+        {
+            perror("fclose()");
+            exit(1);
+        }
+        //*********************
+
+        //Dołączenie znaku do całkowitej produkcji (pliku "produkcja")
+        fputc(znak, produkcja);
+        //************************************************************
+
+        //Pobranie nowego znaku
+        znak = fgetc(surowce);
+        //*********************
+    }
+
+    if (fclose(surowce) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    if (fclose(produkcja) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    return 0;
+}
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    FILE *surowce, *produkcja, *towar;
+
+    //Otwarcie plików roboczych "surowce", "produkcja"
+    surowce = fopen("surowce", "r");
+    if (surowce == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    produkcja = fopen("produkcja", "w");
+    if (produkcja == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    //************************************************
+
+    char znak; int ilosc_znakow;
+    ilosc_znakow = 0;
+    znak = fgetc(surowce);
+    while(znak != EOF)
+    {
+        //Obsługa wczytanego znaku
+        ilosc_znakow++;
+        printf("%d : ASCII=%d\n", ilosc_znakow, znak);
+        //************************
+
+        //Zapis znaku do bufora
+        towar = fopen("towar", "w");
+        if (towar == NULL)
+        {
+            perror("fopen()");
+            exit(1);
+        }
+        fputc(znak, towar);
+        if (fclose(towar) == EOF)
+        {
+            perror("fclose()");
+            exit(1);
+        }
+        //*********************
+
+        //Dołączenie znaku do całkowitej produkcji (pliku "produkcja")
+        fputc(znak, produkcja);
+        //************************************************************
+
+        //Pobranie nowego znaku
+        znak = fgetc(surowce);
+        //*********************
+    }
+
+    if (fclose(surowce) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    if (fclose(produkcja) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    return 0;
+}
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    FILE *surowce, *produkcja, *towar;
+
+    //Otwarcie plików roboczych "surowce", "produkcja"
+    surowce = fopen("surowce", "r");
+    if (surowce == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    produkcja = fopen("produkcja", "w");
+    if (produkcja == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    //************************************************
+
+    char znak; int ilosc_znakow;
+    ilosc_znakow = 0;
+    znak = fgetc(surowce);
+    while(znak != EOF)
+    {
+        //Obsługa wczytanego znaku
+        ilosc_znakow++;
+        printf("%d : ASCII=%d\n", ilosc_znakow, znak);
+        //************************
+
+        //Zapis znaku do bufora
+        towar = fopen("towar", "w");
+        if (towar == NULL)
+        {
+            perror("fopen()");
+            exit(1);
+        }
+        fputc(znak, towar);
+        if (fclose(towar) == EOF)
+        {
+            perror("fclose()");
+            exit(1);
+        }
+        //*********************
+
+        //Dołączenie znaku do całkowitej produkcji (pliku "produkcja")
+        fputc(znak, produkcja);
+        //************************************************************
+
+        //Pobranie nowego znaku
+        znak = fgetc(surowce);
+        //*********************
+    }
+
+    if (fclose(surowce) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    if (fclose(produkcja) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    return 0;
+}
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    FILE *surowce, *produkcja, *towar;
+
+    //Otwarcie plików roboczych "surowce", "produkcja"
+    surowce = fopen("surowce", "r");
+    if (surowce == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    produkcja = fopen("produkcja", "w");
+    if (produkcja == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    //************************************************
+
+    char znak; int ilosc_znakow;
+    ilosc_znakow = 0;
+    znak = fgetc(surowce);
+    while(znak != EOF)
+    {
+        //Obsługa wczytanego znaku
+        ilosc_znakow++;
+        printf("%d : ASCII=%d\n", ilosc_znakow, znak);
+        //************************
+
+        //Zapis znaku do bufora
+        towar = fopen("towar", "w");
+        if (towar == NULL)
+        {
+            perror("fopen()");
+            exit(1);
+        }
+        fputc(znak, towar);
+        if (fclose(towar) == EOF)
+        {
+            perror("fclose()");
+            exit(1);
+        }
+        //*********************
+
+        //Dołączenie znaku do całkowitej produkcji (pliku "produkcja")
+        fputc(znak, produkcja);
+        //************************************************************
+
+        //Pobranie nowego znaku
+        znak = fgetc(surowce);
+        //*********************
+    }
+
+    if (fclose(surowce) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    if (fclose(produkcja) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    return 0;
+}
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    FILE *surowce, *produkcja, *towar;
+
+    //Otwarcie plików roboczych "surowce", "produkcja"
+    surowce = fopen("surowce", "r");
+    if (surowce == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    produkcja = fopen("produkcja", "w");
+    if (produkcja == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    //************************************************
+
+    char znak; int ilosc_znakow;
+    ilosc_znakow = 0;
+    znak = fgetc(surowce);
+    while(znak != EOF)
+    {
+        //Obsługa wczytanego znaku
+        ilosc_znakow++;
+        printf("%d : ASCII=%d\n", ilosc_znakow, znak);
+        //************************
+
+        //Zapis znaku do bufora
+        towar = fopen("towar", "w");
+        if (towar == NULL)
+        {
+            perror("fopen()");
+            exit(1);
+        }
+        fputc(znak, towar);
+        if (fclose(towar) == EOF)
+        {
+            perror("fclose()");
+            exit(1);
+        }
+        //*********************
+
+        //Dołączenie znaku do całkowitej produkcji (pliku "produkcja")
+        fputc(znak, produkcja);
+        //************************************************************
+
+        //Pobranie nowego znaku
+        znak = fgetc(surowce);
+        //*********************
+    }
+
+    if (fclose(surowce) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    if (fclose(produkcja) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    return 0;
+}
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    FILE *surowce, *produkcja, *towar;
+
+    //Otwarcie plików roboczych "surowce", "produkcja"
+    surowce = fopen("surowce", "r");
+    if (surowce == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    produkcja = fopen("produkcja", "w");
+    if (produkcja == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    //************************************************
+
+    char znak; int ilosc_znakow;
+    ilosc_znakow = 0;
+    znak = fgetc(surowce);
+    while(znak != EOF)
+    {
+        //Obsługa wczytanego znaku
+        ilosc_znakow++;
+        printf("%d : ASCII=%d\n", ilosc_znakow, znak);
+        //************************
+
+        //Zapis znaku do bufora
+        towar = fopen("towar", "w");
+        if (towar == NULL)
+        {
+            perror("fopen()");
+            exit(1);
+        }
+        fputc(znak, towar);
+        if (fclose(towar) == EOF)
+        {
+            perror("fclose()");
+            exit(1);
+        }
+        //*********************
+
+        //Dołączenie znaku do całkowitej produkcji (pliku "produkcja")
+        fputc(znak, produkcja);
+        //************************************************************
+
+        //Pobranie nowego znaku
+        znak = fgetc(surowce);
+        //*********************
+    }
+
+    if (fclose(surowce) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    if (fclose(produkcja) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    return 0;
+}
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    FILE *surowce, *produkcja, *towar;
+
+    //Otwarcie plików roboczych "surowce", "produkcja"
+    surowce = fopen("surowce", "r");
+    if (surowce == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    produkcja = fopen("produkcja", "w");
+    if (produkcja == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    //************************************************
+
+    char znak; int ilosc_znakow;
+    ilosc_znakow = 0;
+    znak = fgetc(surowce);
+    while(znak != EOF)
+    {
+        //Obsługa wczytanego znaku
+        ilosc_znakow++;
+        printf("%d : ASCII=%d\n", ilosc_znakow, znak);
+        //************************
+
+        //Zapis znaku do bufora
+        towar = fopen("towar", "w");
+        if (towar == NULL)
+        {
+            perror("fopen()");
+            exit(1);
+        }
+        fputc(znak, towar);
+        if (fclose(towar) == EOF)
+        {
+            perror("fclose()");
+            exit(1);
+        }
+        //*********************
+
+        //Dołączenie znaku do całkowitej produkcji (pliku "produkcja")
+        fputc(znak, produkcja);
+        //************************************************************
+
+        //Pobranie nowego znaku
+        znak = fgetc(surowce);
+        //*********************
+    }
+
+    if (fclose(surowce) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    if (fclose(produkcja) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    return 0;
+}
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    FILE *surowce, *produkcja, *towar;
+
+    //Otwarcie plików roboczych "surowce", "produkcja"
+    surowce = fopen("surowce", "r");
+    if (surowce == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    produkcja = fopen("produkcja", "w");
+    if (produkcja == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    //************************************************
+
+    char znak; int ilosc_znakow;
+    ilosc_znakow = 0;
+    znak = fgetc(surowce);
+    while(znak != EOF)
+    {
+        //Obsługa wczytanego znaku
+        ilosc_znakow++;
+        printf("%d : ASCII=%d\n", ilosc_znakow, znak);
+        //************************
+
+        //Zapis znaku do bufora
+        towar = fopen("towar", "w");
+        if (towar == NULL)
+        {
+            perror("fopen()");
+            exit(1);
+        }
+        fputc(znak, towar);
+        if (fclose(towar) == EOF)
+        {
+            perror("fclose()");
+            exit(1);
+        }
+        //*********************
+
+        //Dołączenie znaku do całkowitej produkcji (pliku "produkcja")
+        fputc(znak, produkcja);
+        //************************************************************
+
+        //Pobranie nowego znaku
+        znak = fgetc(surowce);
+        //*********************
+    }
+
+    if (fclose(surowce) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    if (fclose(produkcja) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    return 0;
+}
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    FILE *surowce, *produkcja, *towar;
+
+    //Otwarcie plików roboczych "surowce", "produkcja"
+    surowce = fopen("surowce", "r");
+    if (surowce == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    produkcja = fopen("produkcja", "w");
+    if (produkcja == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    //************************************************
+
+    char znak; int ilosc_znakow;
+    ilosc_znakow = 0;
+    znak = fgetc(surowce);
+    while(znak != EOF)
+    {
+        //Obsługa wczytanego znaku
+        ilosc_znakow++;
+        printf("%d : ASCII=%d\n", ilosc_znakow, znak);
+        //************************
+
+        //Zapis znaku do bufora
+        towar = fopen("towar", "w");
+        if (towar == NULL)
+        {
+            perror("fopen()");
+            exit(1);
+        }
+        fputc(znak, towar);
+        if (fclose(towar) == EOF)
+        {
+            perror("fclose()");
+            exit(1);
+        }
+        //*********************
+
+        //Dołączenie znaku do całkowitej produkcji (pliku "produkcja")
+        fputc(znak, produkcja);
+        //************************************************************
+
+        //Pobranie nowego znaku
+        znak = fgetc(surowce);
+        //*********************
+    }
+
+    if (fclose(surowce) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    if (fclose(produkcja) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    return 0;
+}
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    FILE *surowce, *produkcja, *towar;
+
+    //Otwarcie plików roboczych "surowce", "produkcja"
+    surowce = fopen("surowce", "r");
+    if (surowce == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    produkcja = fopen("produkcja", "w");
+    if (produkcja == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    //************************************************
+
+    char znak; int ilosc_znakow;
+    ilosc_znakow = 0;
+    znak = fgetc(surowce);
+    while(znak != EOF)
+    {
+        //Obsługa wczytanego znaku
+        ilosc_znakow++;
+        printf("%d : ASCII=%d\n", ilosc_znakow, znak);
+        //************************
+
+        //Zapis znaku do bufora
+        towar = fopen("towar", "w");
+        if (towar == NULL)
+        {
+            perror("fopen()");
+            exit(1);
+        }
+        fputc(znak, towar);
+        if (fclose(towar) == EOF)
+        {
+            perror("fclose()");
+            exit(1);
+        }
+        //*********************
+
+        //Dołączenie znaku do całkowitej produkcji (pliku "produkcja")
+        fputc(znak, produkcja);
+        //************************************************************
+
+        //Pobranie nowego znaku
+        znak = fgetc(surowce);
+        //*********************
+    }
+
+    if (fclose(surowce) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    if (fclose(produkcja) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    return 0;
+}
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    FILE *surowce, *produkcja, *towar;
+
+    //Otwarcie plików roboczych "surowce", "produkcja"
+    surowce = fopen("surowce", "r");
+    if (surowce == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    produkcja = fopen("produkcja", "w");
+    if (produkcja == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    //************************************************
+
+    char znak; int ilosc_znakow;
+    ilosc_znakow = 0;
+    znak = fgetc(surowce);
+    while(znak != EOF)
+    {
+        //Obsługa wczytanego znaku
+        ilosc_znakow++;
+        printf("%d : ASCII=%d\n", ilosc_znakow, znak);
+        //************************
+
+        //Zapis znaku do bufora
+        towar = fopen("towar", "w");
+        if (towar == NULL)
+        {
+            perror("fopen()");
+            exit(1);
+        }
+        fputc(znak, towar);
+        if (fclose(towar) == EOF)
+        {
+            perror("fclose()");
+            exit(1);
+        }
+        //*********************
+
+        //Dołączenie znaku do całkowitej produkcji (pliku "produkcja")
+        fputc(znak, produkcja);
+        //************************************************************
+
+        //Pobranie nowego znaku
+        znak = fgetc(surowce);
+        //*********************
+    }
+
+    if (fclose(surowce) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    if (fclose(produkcja) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    return 0;
+}
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    FILE *surowce, *produkcja, *towar;
+
+    //Otwarcie plików roboczych "surowce", "produkcja"
+    surowce = fopen("surowce", "r");
+    if (surowce == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    produkcja = fopen("produkcja", "w");
+    if (produkcja == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    //************************************************
+
+    char znak; int ilosc_znakow;
+    ilosc_znakow = 0;
+    znak = fgetc(surowce);
+    while(znak != EOF)
+    {
+        //Obsługa wczytanego znaku
+        ilosc_znakow++;
+        printf("%d : ASCII=%d\n", ilosc_znakow, znak);
+        //************************
+
+        //Zapis znaku do bufora
+        towar = fopen("towar", "w");
+        if (towar == NULL)
+        {
+            perror("fopen()");
+            exit(1);
+        }
+        fputc(znak, towar);
+        if (fclose(towar) == EOF)
+        {
+            perror("fclose()");
+            exit(1);
+        }
+        //*********************
+
+        //Dołączenie znaku do całkowitej produkcji (pliku "produkcja")
+        fputc(znak, produkcja);
+        //************************************************************
+
+        //Pobranie nowego znaku
+        znak = fgetc(surowce);
+        //*********************
+    }
+
+    if (fclose(surowce) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    if (fclose(produkcja) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    return 0;
+}
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    FILE *surowce, *produkcja, *towar;
+
+    //Otwarcie plików roboczych "surowce", "produkcja"
+    surowce = fopen("surowce", "r");
+    if (surowce == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    produkcja = fopen("produkcja", "w");
+    if (produkcja == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    //************************************************
+
+    char znak; int ilosc_znakow;
+    ilosc_znakow = 0;
+    znak = fgetc(surowce);
+    while(znak != EOF)
+    {
+        //Obsługa wczytanego znaku
+        ilosc_znakow++;
+        printf("%d : ASCII=%d\n", ilosc_znakow, znak);
+        //************************
+
+        //Zapis znaku do bufora
+        towar = fopen("towar", "w");
+        if (towar == NULL)
+        {
+            perror("fopen()");
+            exit(1);
+        }
+        fputc(znak, towar);
+        if (fclose(towar) == EOF)
+        {
+            perror("fclose()");
+            exit(1);
+        }
+        //*********************
+
+        //Dołączenie znaku do całkowitej produkcji (pliku "produkcja")
+        fputc(znak, produkcja);
+        //************************************************************
+
+        //Pobranie nowego znaku
+        znak = fgetc(surowce);
+        //*********************
+    }
+
+    if (fclose(surowce) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    if (fclose(produkcja) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    return 0;
+}
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    FILE *surowce, *produkcja, *towar;
+
+    //Otwarcie plików roboczych "surowce", "produkcja"
+    surowce = fopen("surowce", "r");
+    if (surowce == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    produkcja = fopen("produkcja", "w");
+    if (produkcja == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    //************************************************
+
+    char znak; int ilosc_znakow;
+    ilosc_znakow = 0;
+    znak = fgetc(surowce);
+    while(znak != EOF)
+    {
+        //Obsługa wczytanego znaku
+        ilosc_znakow++;
+        printf("%d : ASCII=%d\n", ilosc_znakow, znak);
+        //************************
+
+        //Zapis znaku do bufora
+        towar = fopen("towar", "w");
+        if (towar == NULL)
+        {
+            perror("fopen()");
+            exit(1);
+        }
+        fputc(znak, towar);
+        if (fclose(towar) == EOF)
+        {
+            perror("fclose()");
+            exit(1);
+        }
+        //*********************
+
+        //Dołączenie znaku do całkowitej produkcji (pliku "produkcja")
+        fputc(znak, produkcja);
+        //************************************************************
+
+        //Pobranie nowego znaku
+        znak = fgetc(surowce);
+        //*********************
+    }
+
+    if (fclose(surowce) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    if (fclose(produkcja) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    return 0;
+}
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    FILE *surowce, *produkcja, *towar;
+
+    //Otwarcie plików roboczych "surowce", "produkcja"
+    surowce = fopen("surowce", "r");
+    if (surowce == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    produkcja = fopen("produkcja", "w");
+    if (produkcja == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    //************************************************
+
+    char znak; int ilosc_znakow;
+    ilosc_znakow = 0;
+    znak = fgetc(surowce);
+    while(znak != EOF)
+    {
+        //Obsługa wczytanego znaku
+        ilosc_znakow++;
+        printf("%d : ASCII=%d\n", ilosc_znakow, znak);
+        //************************
+
+        //Zapis znaku do bufora
+        towar = fopen("towar", "w");
+        if (towar == NULL)
+        {
+            perror("fopen()");
+            exit(1);
+        }
+        fputc(znak, towar);
+        if (fclose(towar) == EOF)
+        {
+            perror("fclose()");
+            exit(1);
+        }
+        //*********************
+
+        //Dołączenie znaku do całkowitej produkcji (pliku "produkcja")
+        fputc(znak, produkcja);
+        //************************************************************
+
+        //Pobranie nowego znaku
+        znak = fgetc(surowce);
+        //*********************
+    }
+
+    if (fclose(surowce) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    if (fclose(produkcja) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    return 0;
+}
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    FILE *surowce, *produkcja, *towar;
+
+    //Otwarcie plików roboczych "surowce", "produkcja"
+    surowce = fopen("surowce", "r");
+    if (surowce == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    produkcja = fopen("produkcja", "w");
+    if (produkcja == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    //************************************************
+
+    char znak; int ilosc_znakow;
+    ilosc_znakow = 0;
+    znak = fgetc(surowce);
+    while(znak != EOF)
+    {
+        //Obsługa wczytanego znaku
+        ilosc_znakow++;
+        printf("%d : ASCII=%d\n", ilosc_znakow, znak);
+        //************************
+
+        //Zapis znaku do bufora
+        towar = fopen("towar", "w");
+        if (towar == NULL)
+        {
+            perror("fopen()");
+            exit(1);
+        }
+        fputc(znak, towar);
+        if (fclose(towar) == EOF)
+        {
+            perror("fclose()");
+            exit(1);
+        }
+        //*********************
+
+        //Dołączenie znaku do całkowitej produkcji (pliku "produkcja")
+        fputc(znak, produkcja);
+        //************************************************************
+
+        //Pobranie nowego znaku
+        znak = fgetc(surowce);
+        //*********************
+    }
+
+    if (fclose(surowce) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    if (fclose(produkcja) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    return 0;
+}
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    FILE *surowce, *produkcja, *towar;
+
+    //Otwarcie plików roboczych "surowce", "produkcja"
+    surowce = fopen("surowce", "r");
+    if (surowce == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    produkcja = fopen("produkcja", "w");
+    if (produkcja == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    //************************************************
+
+    char znak; int ilosc_znakow;
+    ilosc_znakow = 0;
+    znak = fgetc(surowce);
+    while(znak != EOF)
+    {
+        //Obsługa wczytanego znaku
+        ilosc_znakow++;
+        printf("%d : ASCII=%d\n", ilosc_znakow, znak);
+        //************************
+
+        //Zapis znaku do bufora
+        towar = fopen("towar", "w");
+        if (towar == NULL)
+        {
+            perror("fopen()");
+            exit(1);
+        }
+        fputc(znak, towar);
+        if (fclose(towar) == EOF)
+        {
+            perror("fclose()");
+            exit(1);
+        }
+        //*********************
+
+        //Dołączenie znaku do całkowitej produkcji (pliku "produkcja")
+        fputc(znak, produkcja);
+        //************************************************************
+
+        //Pobranie nowego znaku
+        znak = fgetc(surowce);
+        //*********************
+    }
+
+    if (fclose(surowce) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    if (fclose(produkcja) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    return 0;
+}
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    FILE *surowce, *produkcja, *towar;
+
+    //Otwarcie plików roboczych "surowce", "produkcja"
+    surowce = fopen("surowce", "r");
+    if (surowce == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    produkcja = fopen("produkcja", "w");
+    if (produkcja == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    //************************************************
+
+    char znak; int ilosc_znakow;
+    ilosc_znakow = 0;
+    znak = fgetc(surowce);
+    while(znak != EOF)
+    {
+        //Obsługa wczytanego znaku
+        ilosc_znakow++;
+        printf("%d : ASCII=%d\n", ilosc_znakow, znak);
+        //************************
+
+        //Zapis znaku do bufora
+        towar = fopen("towar", "w");
+        if (towar == NULL)
+        {
+            perror("fopen()");
+            exit(1);
+        }
+        fputc(znak, towar);
+        if (fclose(towar) == EOF)
+        {
+            perror("fclose()");
+            exit(1);
+        }
+        //*********************
+
+        //Dołączenie znaku do całkowitej produkcji (pliku "produkcja")
+        fputc(znak, produkcja);
+        //************************************************************
+
+        //Pobranie nowego znaku
+        znak = fgetc(surowce);
+        //*********************
+    }
+
+    if (fclose(surowce) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    if (fclose(produkcja) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    return 0;
+}
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    FILE *surowce, *produkcja, *towar;
+
+    //Otwarcie plików roboczych "surowce", "produkcja"
+    surowce = fopen("surowce", "r");
+    if (surowce == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    produkcja = fopen("produkcja", "w");
+    if (produkcja == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    //************************************************
+
+    char znak; int ilosc_znakow;
+    ilosc_znakow = 0;
+    znak = fgetc(surowce);
+    while(znak != EOF)
+    {
+        //Obsługa wczytanego znaku
+        ilosc_znakow++;
+        printf("%d : ASCII=%d\n", ilosc_znakow, znak);
+        //************************
+
+        //Zapis znaku do bufora
+        towar = fopen("towar", "w");
+        if (towar == NULL)
+        {
+            perror("fopen()");
+            exit(1);
+        }
+        fputc(znak, towar);
+        if (fclose(towar) == EOF)
+        {
+            perror("fclose()");
+            exit(1);
+        }
+        //*********************
+
+        //Dołączenie znaku do całkowitej produkcji (pliku "produkcja")
+        fputc(znak, produkcja);
+        //************************************************************
+
+        //Pobranie nowego znaku
+        znak = fgetc(surowce);
+        //*********************
+    }
+
+    if (fclose(surowce) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    if (fclose(produkcja) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    return 0;
+}
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    FILE *surowce, *produkcja, *towar;
+
+    //Otwarcie plików roboczych "surowce", "produkcja"
+    surowce = fopen("surowce", "r");
+    if (surowce == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    produkcja = fopen("produkcja", "w");
+    if (produkcja == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    //************************************************
+
+    char znak; int ilosc_znakow;
+    ilosc_znakow = 0;
+    znak = fgetc(surowce);
+    while(znak != EOF)
+    {
+        //Obsługa wczytanego znaku
+        ilosc_znakow++;
+        printf("%d : ASCII=%d\n", ilosc_znakow, znak);
+        //************************
+
+        //Zapis znaku do bufora
+        towar = fopen("towar", "w");
+        if (towar == NULL)
+        {
+            perror("fopen()");
+            exit(1);
+        }
+        fputc(znak, towar);
+        if (fclose(towar) == EOF)
+        {
+            perror("fclose()");
+            exit(1);
+        }
+        //*********************
+
+        //Dołączenie znaku do całkowitej produkcji (pliku "produkcja")
+        fputc(znak, produkcja);
+        //************************************************************
+
+        //Pobranie nowego znaku
+        znak = fgetc(surowce);
+        //*********************
+    }
+
+    if (fclose(surowce) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    if (fclose(produkcja) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    return 0;
+}
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    FILE *surowce, *produkcja, *towar;
+
+    //Otwarcie plików roboczych "surowce", "produkcja"
+    surowce = fopen("surowce", "r");
+    if (surowce == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    produkcja = fopen("produkcja", "w");
+    if (produkcja == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    //************************************************
+
+    char znak; int ilosc_znakow;
+    ilosc_znakow = 0;
+    znak = fgetc(surowce);
+    while(znak != EOF)
+    {
+        //Obsługa wczytanego znaku
+        ilosc_znakow++;
+        printf("%d : ASCII=%d\n", ilosc_znakow, znak);
+        //************************
+
+        //Zapis znaku do bufora
+        towar = fopen("towar", "w");
+        if (towar == NULL)
+        {
+            perror("fopen()");
+            exit(1);
+        }
+        fputc(znak, towar);
+        if (fclose(towar) == EOF)
+        {
+            perror("fclose()");
+            exit(1);
+        }
+        //*********************
+
+        //Dołączenie znaku do całkowitej produkcji (pliku "produkcja")
+        fputc(znak, produkcja);
+        //************************************************************
+
+        //Pobranie nowego znaku
+        znak = fgetc(surowce);
+        //*********************
+    }
+
+    if (fclose(surowce) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    if (fclose(produkcja) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    return 0;
+}
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    FILE *surowce, *produkcja, *towar;
+
+    //Otwarcie plików roboczych "surowce", "produkcja"
+    surowce = fopen("surowce", "r");
+    if (surowce == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    produkcja = fopen("produkcja", "w");
+    if (produkcja == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    //************************************************
+
+    char znak; int ilosc_znakow;
+    ilosc_znakow = 0;
+    znak = fgetc(surowce);
+    while(znak != EOF)
+    {
+        //Obsługa wczytanego znaku
+        ilosc_znakow++;
+        printf("%d : ASCII=%d\n", ilosc_znakow, znak);
+        //************************
+
+        //Zapis znaku do bufora
+        towar = fopen("towar", "w");
+        if (towar == NULL)
+        {
+            perror("fopen()");
+            exit(1);
+        }
+        fputc(znak, towar);
+        if (fclose(towar) == EOF)
+        {
+            perror("fclose()");
+            exit(1);
+        }
+        //*********************
+
+        //Dołączenie znaku do całkowitej produkcji (pliku "produkcja")
+        fputc(znak, produkcja);
+        //************************************************************
+
+        //Pobranie nowego znaku
+        znak = fgetc(surowce);
+        //*********************
+    }
+
+    if (fclose(surowce) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    if (fclose(produkcja) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    return 0;
+}
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    FILE *surowce, *produkcja, *towar;
+
+    //Otwarcie plików roboczych "surowce", "produkcja"
+    surowce = fopen("surowce", "r");
+    if (surowce == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    produkcja = fopen("produkcja", "w");
+    if (produkcja == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    //************************************************
+
+    char znak; int ilosc_znakow;
+    ilosc_znakow = 0;
+    znak = fgetc(surowce);
+    while(znak != EOF)
+    {
+        //Obsługa wczytanego znaku
+        ilosc_znakow++;
+        printf("%d : ASCII=%d\n", ilosc_znakow, znak);
+        //************************
+
+        //Zapis znaku do bufora
+        towar = fopen("towar", "w");
+        if (towar == NULL)
+        {
+            perror("fopen()");
+            exit(1);
+        }
+        fputc(znak, towar);
+        if (fclose(towar) == EOF)
+        {
+            perror("fclose()");
+            exit(1);
+        }
+        //*********************
+
+        //Dołączenie znaku do całkowitej produkcji (pliku "produkcja")
+        fputc(znak, produkcja);
+        //************************************************************
+
+        //Pobranie nowego znaku
+        znak = fgetc(surowce);
+        //*********************
+    }
+
+    if (fclose(surowce) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    if (fclose(produkcja) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    return 0;
+}
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    FILE *surowce, *produkcja, *towar;
+
+    //Otwarcie plików roboczych "surowce", "produkcja"
+    surowce = fopen("surowce", "r");
+    if (surowce == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    produkcja = fopen("produkcja", "w");
+    if (produkcja == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    //************************************************
+
+    char znak; int ilosc_znakow;
+    ilosc_znakow = 0;
+    znak = fgetc(surowce);
+    while(znak != EOF)
+    {
+        //Obsługa wczytanego znaku
+        ilosc_znakow++;
+        printf("%d : ASCII=%d\n", ilosc_znakow, znak);
+        //************************
+
+        //Zapis znaku do bufora
+        towar = fopen("towar", "w");
+        if (towar == NULL)
+        {
+            perror("fopen()");
+            exit(1);
+        }
+        fputc(znak, towar);
+        if (fclose(towar) == EOF)
+        {
+            perror("fclose()");
+            exit(1);
+        }
+        //*********************
+
+        //Dołączenie znaku do całkowitej produkcji (pliku "produkcja")
+        fputc(znak, produkcja);
+        //************************************************************
+
+        //Pobranie nowego znaku
+        znak = fgetc(surowce);
+        //*********************
+    }
+
+    if (fclose(surowce) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    if (fclose(produkcja) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    return 0;
+}
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    FILE *surowce, *produkcja, *towar;
+
+    //Otwarcie plików roboczych "surowce", "produkcja"
+    surowce = fopen("surowce", "r");
+    if (surowce == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    produkcja = fopen("produkcja", "w");
+    if (produkcja == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    //************************************************
+
+    char znak; int ilosc_znakow;
+    ilosc_znakow = 0;
+    znak = fgetc(surowce);
+    while(znak != EOF)
+    {
+        //Obsługa wczytanego znaku
+        ilosc_znakow++;
+        printf("%d : ASCII=%d\n", ilosc_znakow, znak);
+        //************************
+
+        //Zapis znaku do bufora
+        towar = fopen("towar", "w");
+        if (towar == NULL)
+        {
+            perror("fopen()");
+            exit(1);
+        }
+        fputc(znak, towar);
+        if (fclose(towar) == EOF)
+        {
+            perror("fclose()");
+            exit(1);
+        }
+        //*********************
+
+        //Dołączenie znaku do całkowitej produkcji (pliku "produkcja")
+        fputc(znak, produkcja);
+        //************************************************************
+
+        //Pobranie nowego znaku
+        znak = fgetc(surowce);
+        //*********************
+    }
+
+    if (fclose(surowce) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    if (fclose(produkcja) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    return 0;
+}
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    FILE *surowce, *produkcja, *towar;
+
+    //Otwarcie plików roboczych "surowce", "produkcja"
+    surowce = fopen("surowce", "r");
+    if (surowce == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    produkcja = fopen("produkcja", "w");
+    if (produkcja == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    //************************************************
+
+    char znak; int ilosc_znakow;
+    ilosc_znakow = 0;
+    znak = fgetc(surowce);
+    while(znak != EOF)
+    {
+        //Obsługa wczytanego znaku
+        ilosc_znakow++;
+        printf("%d : ASCII=%d\n", ilosc_znakow, znak);
+        //************************
+
+        //Zapis znaku do bufora
+        towar = fopen("towar", "w");
+        if (towar == NULL)
+        {
+            perror("fopen()");
+            exit(1);
+        }
+        fputc(znak, towar);
+        if (fclose(towar) == EOF)
+        {
+            perror("fclose()");
+            exit(1);
+        }
+        //*********************
+
+        //Dołączenie znaku do całkowitej produkcji (pliku "produkcja")
+        fputc(znak, produkcja);
+        //************************************************************
+
+        //Pobranie nowego znaku
+        znak = fgetc(surowce);
+        //*********************
+    }
+
+    if (fclose(surowce) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    if (fclose(produkcja) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    return 0;
+}
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    FILE *surowce, *produkcja, *towar;
+
+    //Otwarcie plików roboczych "surowce", "produkcja"
+    surowce = fopen("surowce", "r");
+    if (surowce == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    produkcja = fopen("produkcja", "w");
+    if (produkcja == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    //************************************************
+
+    char znak; int ilosc_znakow;
+    ilosc_znakow = 0;
+    znak = fgetc(surowce);
+    while(znak != EOF)
+    {
+        //Obsługa wczytanego znaku
+        ilosc_znakow++;
+        printf("%d : ASCII=%d\n", ilosc_znakow, znak);
+        //************************
+
+        //Zapis znaku do bufora
+        towar = fopen("towar", "w");
+        if (towar == NULL)
+        {
+            perror("fopen()");
+            exit(1);
+        }
+        fputc(znak, towar);
+        if (fclose(towar) == EOF)
+        {
+            perror("fclose()");
+            exit(1);
+        }
+        //*********************
+
+        //Dołączenie znaku do całkowitej produkcji (pliku "produkcja")
+        fputc(znak, produkcja);
+        //************************************************************
+
+        //Pobranie nowego znaku
+        znak = fgetc(surowce);
+        //*********************
+    }
+
+    if (fclose(surowce) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    if (fclose(produkcja) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    return 0;
+}
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    FILE *surowce, *produkcja, *towar;
+
+    //Otwarcie plików roboczych "surowce", "produkcja"
+    surowce = fopen("surowce", "r");
+    if (surowce == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    produkcja = fopen("produkcja", "w");
+    if (produkcja == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    //************************************************
+
+    char znak; int ilosc_znakow;
+    ilosc_znakow = 0;
+    znak = fgetc(surowce);
+    while(znak != EOF)
+    {
+        //Obsługa wczytanego znaku
+        ilosc_znakow++;
+        printf("%d : ASCII=%d\n", ilosc_znakow, znak);
+        //************************
+
+        //Zapis znaku do bufora
+        towar = fopen("towar", "w");
+        if (towar == NULL)
+        {
+            perror("fopen()");
+            exit(1);
+        }
+        fputc(znak, towar);
+        if (fclose(towar) == EOF)
+        {
+            perror("fclose()");
+            exit(1);
+        }
+        //*********************
+
+        //Dołączenie znaku do całkowitej produkcji (pliku "produkcja")
+        fputc(znak, produkcja);
+        //************************************************************
+
+        //Pobranie nowego znaku
+        znak = fgetc(surowce);
+        //*********************
+    }
+
+    if (fclose(surowce) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    if (fclose(produkcja) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    return 0;
+}
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    FILE *surowce, *produkcja, *towar;
+
+    //Otwarcie plików roboczych "surowce", "produkcja"
+    surowce = fopen("surowce", "r");
+    if (surowce == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    produkcja = fopen("produkcja", "w");
+    if (produkcja == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    //************************************************
+
+    char znak; int ilosc_znakow;
+    ilosc_znakow = 0;
+    znak = fgetc(surowce);
+    while(znak != EOF)
+    {
+        //Obsługa wczytanego znaku
+        ilosc_znakow++;
+        printf("%d : ASCII=%d\n", ilosc_znakow, znak);
+        //************************
+
+        //Zapis znaku do bufora
+        towar = fopen("towar", "w");
+        if (towar == NULL)
+        {
+            perror("fopen()");
+            exit(1);
+        }
+        fputc(znak, towar);
+        if (fclose(towar) == EOF)
+        {
+            perror("fclose()");
+            exit(1);
+        }
+        //*********************
+
+        //Dołączenie znaku do całkowitej produkcji (pliku "produkcja")
+        fputc(znak, produkcja);
+        //************************************************************
+
+        //Pobranie nowego znaku
+        znak = fgetc(surowce);
+        //*********************
+    }
+
+    if (fclose(surowce) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    if (fclose(produkcja) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    return 0;
+}
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    FILE *surowce, *produkcja, *towar;
+
+    //Otwarcie plików roboczych "surowce", "produkcja"
+    surowce = fopen("surowce", "r");
+    if (surowce == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    produkcja = fopen("produkcja", "w");
+    if (produkcja == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    //************************************************
+
+    char znak; int ilosc_znakow;
+    ilosc_znakow = 0;
+    znak = fgetc(surowce);
+    while(znak != EOF)
+    {
+        //Obsługa wczytanego znaku
+        ilosc_znakow++;
+        printf("%d : ASCII=%d\n", ilosc_znakow, znak);
+        //************************
+
+        //Zapis znaku do bufora
+        towar = fopen("towar", "w");
+        if (towar == NULL)
+        {
+            perror("fopen()");
+            exit(1);
+        }
+        fputc(znak, towar);
+        if (fclose(towar) == EOF)
+        {
+            perror("fclose()");
+            exit(1);
+        }
+        //*********************
+
+        //Dołączenie znaku do całkowitej produkcji (pliku "produkcja")
+        fputc(znak, produkcja);
+        //************************************************************
+
+        //Pobranie nowego znaku
+        znak = fgetc(surowce);
+        //*********************
+    }
+
+    if (fclose(surowce) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    if (fclose(produkcja) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    return 0;
+}
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    FILE *surowce, *produkcja, *towar;
+
+    //Otwarcie plików roboczych "surowce", "produkcja"
+    surowce = fopen("surowce", "r");
+    if (surowce == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    produkcja = fopen("produkcja", "w");
+    if (produkcja == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    //************************************************
+
+    char znak; int ilosc_znakow;
+    ilosc_znakow = 0;
+    znak = fgetc(surowce);
+    while(znak != EOF)
+    {
+        //Obsługa wczytanego znaku
+        ilosc_znakow++;
+        printf("%d : ASCII=%d\n", ilosc_znakow, znak);
+        //************************
+
+        //Zapis znaku do bufora
+        towar = fopen("towar", "w");
+        if (towar == NULL)
+        {
+            perror("fopen()");
+            exit(1);
+        }
+        fputc(znak, towar);
+        if (fclose(towar) == EOF)
+        {
+            perror("fclose()");
+            exit(1);
+        }
+        //*********************
+
+        //Dołączenie znaku do całkowitej produkcji (pliku "produkcja")
+        fputc(znak, produkcja);
+        //************************************************************
+
+        //Pobranie nowego znaku
+        znak = fgetc(surowce);
+        //*********************
+    }
+
+    if (fclose(surowce) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    if (fclose(produkcja) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    return 0;
+}
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    FILE *surowce, *produkcja, *towar;
+
+    //Otwarcie plików roboczych "surowce", "produkcja"
+    surowce = fopen("surowce", "r");
+    if (surowce == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    produkcja = fopen("produkcja", "w");
+    if (produkcja == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    //************************************************
+
+    char znak; int ilosc_znakow;
+    ilosc_znakow = 0;
+    znak = fgetc(surowce);
+    while(znak != EOF)
+    {
+        //Obsługa wczytanego znaku
+        ilosc_znakow++;
+        printf("%d : ASCII=%d\n", ilosc_znakow, znak);
+        //************************
+
+        //Zapis znaku do bufora
+        towar = fopen("towar", "w");
+        if (towar == NULL)
+        {
+            perror("fopen()");
+            exit(1);
+        }
+        fputc(znak, towar);
+        if (fclose(towar) == EOF)
+        {
+            perror("fclose()");
+            exit(1);
+        }
+        //*********************
+
+        //Dołączenie znaku do całkowitej produkcji (pliku "produkcja")
+        fputc(znak, produkcja);
+        //************************************************************
+
+        //Pobranie nowego znaku
+        znak = fgetc(surowce);
+        //*********************
+    }
+
+    if (fclose(surowce) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    if (fclose(produkcja) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    return 0;
+}
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    FILE *surowce, *produkcja, *towar;
+
+    //Otwarcie plików roboczych "surowce", "produkcja"
+    surowce = fopen("surowce", "r");
+    if (surowce == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    produkcja = fopen("produkcja", "w");
+    if (produkcja == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    //************************************************
+
+    char znak; int ilosc_znakow;
+    ilosc_znakow = 0;
+    znak = fgetc(surowce);
+    while(znak != EOF)
+    {
+        //Obsługa wczytanego znaku
+        ilosc_znakow++;
+        printf("%d : ASCII=%d\n", ilosc_znakow, znak);
+        //************************
+
+        //Zapis znaku do bufora
+        towar = fopen("towar", "w");
+        if (towar == NULL)
+        {
+            perror("fopen()");
+            exit(1);
+        }
+        fputc(znak, towar);
+        if (fclose(towar) == EOF)
+        {
+            perror("fclose()");
+            exit(1);
+        }
+        //*********************
+
+        //Dołączenie znaku do całkowitej produkcji (pliku "produkcja")
+        fputc(znak, produkcja);
+        //************************************************************
+
+        //Pobranie nowego znaku
+        znak = fgetc(surowce);
+        //*********************
+    }
+
+    if (fclose(surowce) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    if (fclose(produkcja) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    return 0;
+}
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    FILE *surowce, *produkcja, *towar;
+
+    //Otwarcie plików roboczych "surowce", "produkcja"
+    surowce = fopen("surowce", "r");
+    if (surowce == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    produkcja = fopen("produkcja", "w");
+    if (produkcja == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    //************************************************
+
+    char znak; int ilosc_znakow;
+    ilosc_znakow = 0;
+    znak = fgetc(surowce);
+    while(znak != EOF)
+    {
+        //Obsługa wczytanego znaku
+        ilosc_znakow++;
+        printf("%d : ASCII=%d\n", ilosc_znakow, znak);
+        //************************
+
+        //Zapis znaku do bufora
+        towar = fopen("towar", "w");
+        if (towar == NULL)
+        {
+            perror("fopen()");
+            exit(1);
+        }
+        fputc(znak, towar);
+        if (fclose(towar) == EOF)
+        {
+            perror("fclose()");
+            exit(1);
+        }
+        //*********************
+
+        //Dołączenie znaku do całkowitej produkcji (pliku "produkcja")
+        fputc(znak, produkcja);
+        //************************************************************
+
+        //Pobranie nowego znaku
+        znak = fgetc(surowce);
+        //*********************
+    }
+
+    if (fclose(surowce) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    if (fclose(produkcja) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    return 0;
+}
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    FILE *surowce, *produkcja, *towar;
+
+    //Otwarcie plików roboczych "surowce", "produkcja"
+    surowce = fopen("surowce", "r");
+    if (surowce == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    produkcja = fopen("produkcja", "w");
+    if (produkcja == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    //************************************************
+
+    char znak; int ilosc_znakow;
+    ilosc_znakow = 0;
+    znak = fgetc(surowce);
+    while(znak != EOF)
+    {
+        //Obsługa wczytanego znaku
+        ilosc_znakow++;
+        printf("%d : ASCII=%d\n", ilosc_znakow, znak);
+        //************************
+
+        //Zapis znaku do bufora
+        towar = fopen("towar", "w");
+        if (towar == NULL)
+        {
+            perror("fopen()");
+            exit(1);
+        }
+        fputc(znak, towar);
+        if (fclose(towar) == EOF)
+        {
+            perror("fclose()");
+            exit(1);
+        }
+        //*********************
+
+        //Dołączenie znaku do całkowitej produkcji (pliku "produkcja")
+        fputc(znak, produkcja);
+        //************************************************************
+
+        //Pobranie nowego znaku
+        znak = fgetc(surowce);
+        //*********************
+    }
+
+    if (fclose(surowce) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    if (fclose(produkcja) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    return 0;
+}
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    FILE *surowce, *produkcja, *towar;
+
+    //Otwarcie plików roboczych "surowce", "produkcja"
+    surowce = fopen("surowce", "r");
+    if (surowce == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    produkcja = fopen("produkcja", "w");
+    if (produkcja == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    //************************************************
+
+    char znak; int ilosc_znakow;
+    ilosc_znakow = 0;
+    znak = fgetc(surowce);
+    while(znak != EOF)
+    {
+        //Obsługa wczytanego znaku
+        ilosc_znakow++;
+        printf("%d : ASCII=%d\n", ilosc_znakow, znak);
+        //************************
+
+        //Zapis znaku do bufora
+        towar = fopen("towar", "w");
+        if (towar == NULL)
+        {
+            perror("fopen()");
+            exit(1);
+        }
+        fputc(znak, towar);
+        if (fclose(towar) == EOF)
+        {
+            perror("fclose()");
+            exit(1);
+        }
+        //*********************
+
+        //Dołączenie znaku do całkowitej produkcji (pliku "produkcja")
+        fputc(znak, produkcja);
+        //************************************************************
+
+        //Pobranie nowego znaku
+        znak = fgetc(surowce);
+        //*********************
+    }
+
+    if (fclose(surowce) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    if (fclose(produkcja) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    return 0;
+}
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    FILE *surowce, *produkcja, *towar;
+
+    //Otwarcie plików roboczych "surowce", "produkcja"
+    surowce = fopen("surowce", "r");
+    if (surowce == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    produkcja = fopen("produkcja", "w");
+    if (produkcja == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    //************************************************
+
+    char znak; int ilosc_znakow;
+    ilosc_znakow = 0;
+    znak = fgetc(surowce);
+    while(znak != EOF)
+    {
+        //Obsługa wczytanego znaku
+        ilosc_znakow++;
+        printf("%d : ASCII=%d\n", ilosc_znakow, znak);
+        //************************
+
+        //Zapis znaku do bufora
+        towar = fopen("towar", "w");
+        if (towar == NULL)
+        {
+            perror("fopen()");
+            exit(1);
+        }
+        fputc(znak, towar);
+        if (fclose(towar) == EOF)
+        {
+            perror("fclose()");
+            exit(1);
+        }
+        //*********************
+
+        //Dołączenie znaku do całkowitej produkcji (pliku "produkcja")
+        fputc(znak, produkcja);
+        //************************************************************
+
+        //Pobranie nowego znaku
+        znak = fgetc(surowce);
+        //*********************
+    }
+
+    if (fclose(surowce) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    if (fclose(produkcja) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    return 0;
+}
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    FILE *surowce, *produkcja, *towar;
+
+    //Otwarcie plików roboczych "surowce", "produkcja"
+    surowce = fopen("surowce", "r");
+    if (surowce == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    produkcja = fopen("produkcja", "w");
+    if (produkcja == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    //************************************************
+
+    char znak; int ilosc_znakow;
+    ilosc_znakow = 0;
+    znak = fgetc(surowce);
+    while(znak != EOF)
+    {
+        //Obsługa wczytanego znaku
+        ilosc_znakow++;
+        printf("%d : ASCII=%d\n", ilosc_znakow, znak);
+        //************************
+
+        //Zapis znaku do bufora
+        towar = fopen("towar", "w");
+        if (towar == NULL)
+        {
+            perror("fopen()");
+            exit(1);
+        }
+        fputc(znak, towar);
+        if (fclose(towar) == EOF)
+        {
+            perror("fclose()");
+            exit(1);
+        }
+        //*********************
+
+        //Dołączenie znaku do całkowitej produkcji (pliku "produkcja")
+        fputc(znak, produkcja);
+        //************************************************************
+
+        //Pobranie nowego znaku
+        znak = fgetc(surowce);
+        //*********************
+    }
+
+    if (fclose(surowce) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    if (fclose(produkcja) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    return 0;
+}
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    FILE *surowce, *produkcja, *towar;
+
+    //Otwarcie plików roboczych "surowce", "produkcja"
+    surowce = fopen("surowce", "r");
+    if (surowce == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    produkcja = fopen("produkcja", "w");
+    if (produkcja == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    //************************************************
+
+    char znak; int ilosc_znakow;
+    ilosc_znakow = 0;
+    znak = fgetc(surowce);
+    while(znak != EOF)
+    {
+        //Obsługa wczytanego znaku
+        ilosc_znakow++;
+        printf("%d : ASCII=%d\n", ilosc_znakow, znak);
+        //************************
+
+        //Zapis znaku do bufora
+        towar = fopen("towar", "w");
+        if (towar == NULL)
+        {
+            perror("fopen()");
+            exit(1);
+        }
+        fputc(znak, towar);
+        if (fclose(towar) == EOF)
+        {
+            perror("fclose()");
+            exit(1);
+        }
+        //*********************
+
+        //Dołączenie znaku do całkowitej produkcji (pliku "produkcja")
+        fputc(znak, produkcja);
+        //************************************************************
+
+        //Pobranie nowego znaku
+        znak = fgetc(surowce);
+        //*********************
+    }
+
+    if (fclose(surowce) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    if (fclose(produkcja) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    return 0;
+}
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    FILE *surowce, *produkcja, *towar;
+
+    //Otwarcie plików roboczych "surowce", "produkcja"
+    surowce = fopen("surowce", "r");
+    if (surowce == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    produkcja = fopen("produkcja", "w");
+    if (produkcja == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    //************************************************
+
+    char znak; int ilosc_znakow;
+    ilosc_znakow = 0;
+    znak = fgetc(surowce);
+    while(znak != EOF)
+    {
+        //Obsługa wczytanego znaku
+        ilosc_znakow++;
+        printf("%d : ASCII=%d\n", ilosc_znakow, znak);
+        //************************
+
+        //Zapis znaku do bufora
+        towar = fopen("towar", "w");
+        if (towar == NULL)
+        {
+            perror("fopen()");
+            exit(1);
+        }
+        fputc(znak, towar);
+        if (fclose(towar) == EOF)
+        {
+            perror("fclose()");
+            exit(1);
+        }
+        //*********************
+
+        //Dołączenie znaku do całkowitej produkcji (pliku "produkcja")
+        fputc(znak, produkcja);
+        //************************************************************
+
+        //Pobranie nowego znaku
+        znak = fgetc(surowce);
+        //*********************
+    }
+
+    if (fclose(surowce) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    if (fclose(produkcja) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    return 0;
+}
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    FILE *surowce, *produkcja, *towar;
+
+    //Otwarcie plików roboczych "surowce", "produkcja"
+    surowce = fopen("surowce", "r");
+    if (surowce == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    produkcja = fopen("produkcja", "w");
+    if (produkcja == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    //************************************************
+
+    char znak; int ilosc_znakow;
+    ilosc_znakow = 0;
+    znak = fgetc(surowce);
+    while(znak != EOF)
+    {
+        //Obsługa wczytanego znaku
+        ilosc_znakow++;
+        printf("%d : ASCII=%d\n", ilosc_znakow, znak);
+        //************************
+
+        //Zapis znaku do bufora
+        towar = fopen("towar", "w");
+        if (towar == NULL)
+        {
+            perror("fopen()");
+            exit(1);
+        }
+        fputc(znak, towar);
+        if (fclose(towar) == EOF)
+        {
+            perror("fclose()");
+            exit(1);
+        }
+        //*********************
+
+        //Dołączenie znaku do całkowitej produkcji (pliku "produkcja")
+        fputc(znak, produkcja);
+        //************************************************************
+
+        //Pobranie nowego znaku
+        znak = fgetc(surowce);
+        //*********************
+    }
+
+    if (fclose(surowce) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    if (fclose(produkcja) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    return 0;
+}
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    FILE *surowce, *produkcja, *towar;
+
+    //Otwarcie plików roboczych "surowce", "produkcja"
+    surowce = fopen("surowce", "r");
+    if (surowce == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    produkcja = fopen("produkcja", "w");
+    if (produkcja == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    //************************************************
+
+    char znak; int ilosc_znakow;
+    ilosc_znakow = 0;
+    znak = fgetc(surowce);
+    while(znak != EOF)
+    {
+        //Obsługa wczytanego znaku
+        ilosc_znakow++;
+        printf("%d : ASCII=%d\n", ilosc_znakow, znak);
+        //************************
+
+        //Zapis znaku do bufora
+        towar = fopen("towar", "w");
+        if (towar == NULL)
+        {
+            perror("fopen()");
+            exit(1);
+        }
+        fputc(znak, towar);
+        if (fclose(towar) == EOF)
+        {
+            perror("fclose()");
+            exit(1);
+        }
+        //*********************
+
+        //Dołączenie znaku do całkowitej produkcji (pliku "produkcja")
+        fputc(znak, produkcja);
+        //************************************************************
+
+        //Pobranie nowego znaku
+        znak = fgetc(surowce);
+        //*********************
+    }
+
+    if (fclose(surowce) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    if (fclose(produkcja) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    return 0;
+}
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    FILE *surowce, *produkcja, *towar;
+
+    //Otwarcie plików roboczych "surowce", "produkcja"
+    surowce = fopen("surowce", "r");
+    if (surowce == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    produkcja = fopen("produkcja", "w");
+    if (produkcja == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    //************************************************
+
+    char znak; int ilosc_znakow;
+    ilosc_znakow = 0;
+    znak = fgetc(surowce);
+    while(znak != EOF)
+    {
+        //Obsługa wczytanego znaku
+        ilosc_znakow++;
+        printf("%d : ASCII=%d\n", ilosc_znakow, znak);
+        //************************
+
+        //Zapis znaku do bufora
+        towar = fopen("towar", "w");
+        if (towar == NULL)
+        {
+            perror("fopen()");
+            exit(1);
+        }
+        fputc(znak, towar);
+        if (fclose(towar) == EOF)
+        {
+            perror("fclose()");
+            exit(1);
+        }
+        //*********************
+
+        //Dołączenie znaku do całkowitej produkcji (pliku "produkcja")
+        fputc(znak, produkcja);
+        //************************************************************
+
+        //Pobranie nowego znaku
+        znak = fgetc(surowce);
+        //*********************
+    }
+
+    if (fclose(surowce) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    if (fclose(produkcja) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    return 0;
+}
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    FILE *surowce, *produkcja, *towar;
+
+    //Otwarcie plików roboczych "surowce", "produkcja"
+    surowce = fopen("surowce", "r");
+    if (surowce == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    produkcja = fopen("produkcja", "w");
+    if (produkcja == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    //************************************************
+
+    char znak; int ilosc_znakow;
+    ilosc_znakow = 0;
+    znak = fgetc(surowce);
+    while(znak != EOF)
+    {
+        //Obsługa wczytanego znaku
+        ilosc_znakow++;
+        printf("%d : ASCII=%d\n", ilosc_znakow, znak);
+        //************************
+
+        //Zapis znaku do bufora
+        towar = fopen("towar", "w");
+        if (towar == NULL)
+        {
+            perror("fopen()");
+            exit(1);
+        }
+        fputc(znak, towar);
+        if (fclose(towar) == EOF)
+        {
+            perror("fclose()");
+            exit(1);
+        }
+        //*********************
+
+        //Dołączenie znaku do całkowitej produkcji (pliku "produkcja")
+        fputc(znak, produkcja);
+        //************************************************************
+
+        //Pobranie nowego znaku
+        znak = fgetc(surowce);
+        //*********************
+    }
+
+    if (fclose(surowce) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    if (fclose(produkcja) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    return 0;
+}
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    FILE *surowce, *produkcja, *towar;
+
+    //Otwarcie plików roboczych "surowce", "produkcja"
+    surowce = fopen("surowce", "r");
+    if (surowce == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    produkcja = fopen("produkcja", "w");
+    if (produkcja == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    //************************************************
+
+    char znak; int ilosc_znakow;
+    ilosc_znakow = 0;
+    znak = fgetc(surowce);
+    while(znak != EOF)
+    {
+        //Obsługa wczytanego znaku
+        ilosc_znakow++;
+        printf("%d : ASCII=%d\n", ilosc_znakow, znak);
+        //************************
+
+        //Zapis znaku do bufora
+        towar = fopen("towar", "w");
+        if (towar == NULL)
+        {
+            perror("fopen()");
+            exit(1);
+        }
+        fputc(znak, towar);
+        if (fclose(towar) == EOF)
+        {
+            perror("fclose()");
+            exit(1);
+        }
+        //*********************
+
+        //Dołączenie znaku do całkowitej produkcji (pliku "produkcja")
+        fputc(znak, produkcja);
+        //************************************************************
+
+        //Pobranie nowego znaku
+        znak = fgetc(surowce);
+        //*********************
+    }
+
+    if (fclose(surowce) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    if (fclose(produkcja) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    return 0;
+}
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    FILE *surowce, *produkcja, *towar;
+
+    //Otwarcie plików roboczych "surowce", "produkcja"
+    surowce = fopen("surowce", "r");
+    if (surowce == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    produkcja = fopen("produkcja", "w");
+    if (produkcja == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    //************************************************
+
+    char znak; int ilosc_znakow;
+    ilosc_znakow = 0;
+    znak = fgetc(surowce);
+    while(znak != EOF)
+    {
+        //Obsługa wczytanego znaku
+        ilosc_znakow++;
+        printf("%d : ASCII=%d\n", ilosc_znakow, znak);
+        //************************
+
+        //Zapis znaku do bufora
+        towar = fopen("towar", "w");
+        if (towar == NULL)
+        {
+            perror("fopen()");
+            exit(1);
+        }
+        fputc(znak, towar);
+        if (fclose(towar) == EOF)
+        {
+            perror("fclose()");
+            exit(1);
+        }
+        //*********************
+
+        //Dołączenie znaku do całkowitej produkcji (pliku "produkcja")
+        fputc(znak, produkcja);
+        //************************************************************
+
+        //Pobranie nowego znaku
+        znak = fgetc(surowce);
+        //*********************
+    }
+
+    if (fclose(surowce) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    if (fclose(produkcja) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    return 0;
+}
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    FILE *surowce, *produkcja, *towar;
+
+    //Otwarcie plików roboczych "surowce", "produkcja"
+    surowce = fopen("surowce", "r");
+    if (surowce == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    produkcja = fopen("produkcja", "w");
+    if (produkcja == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    //************************************************
+
+    char znak; int ilosc_znakow;
+    ilosc_znakow = 0;
+    znak = fgetc(surowce);
+    while(znak != EOF)
+    {
+        //Obsługa wczytanego znaku
+        ilosc_znakow++;
+        printf("%d : ASCII=%d\n", ilosc_znakow, znak);
+        //************************
+
+        //Zapis znaku do bufora
+        towar = fopen("towar", "w");
+        if (towar == NULL)
+        {
+            perror("fopen()");
+            exit(1);
+        }
+        fputc(znak, towar);
+        if (fclose(towar) == EOF)
+        {
+            perror("fclose()");
+            exit(1);
+        }
+        //*********************
+
+        //Dołączenie znaku do całkowitej produkcji (pliku "produkcja")
+        fputc(znak, produkcja);
+        //************************************************************
+
+        //Pobranie nowego znaku
+        znak = fgetc(surowce);
+        //*********************
+    }
+
+    if (fclose(surowce) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    if (fclose(produkcja) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    return 0;
+}
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    FILE *surowce, *produkcja, *towar;
+
+    //Otwarcie plików roboczych "surowce", "produkcja"
+    surowce = fopen("surowce", "r");
+    if (surowce == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    produkcja = fopen("produkcja", "w");
+    if (produkcja == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    //************************************************
+
+    char znak; int ilosc_znakow;
+    ilosc_znakow = 0;
+    znak = fgetc(surowce);
+    while(znak != EOF)
+    {
+        //Obsługa wczytanego znaku
+        ilosc_znakow++;
+        printf("%d : ASCII=%d\n", ilosc_znakow, znak);
+        //************************
+
+        //Zapis znaku do bufora
+        towar = fopen("towar", "w");
+        if (towar == NULL)
+        {
+            perror("fopen()");
+            exit(1);
+        }
+        fputc(znak, towar);
+        if (fclose(towar) == EOF)
+        {
+            perror("fclose()");
+            exit(1);
+        }
+        //*********************
+
+        //Dołączenie znaku do całkowitej produkcji (pliku "produkcja")
+        fputc(znak, produkcja);
+        //************************************************************
+
+        //Pobranie nowego znaku
+        znak = fgetc(surowce);
+        //*********************
+    }
+
+    if (fclose(surowce) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    if (fclose(produkcja) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    return 0;
+}
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    FILE *surowce, *produkcja, *towar;
+
+    //Otwarcie plików roboczych "surowce", "produkcja"
+    surowce = fopen("surowce", "r");
+    if (surowce == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    produkcja = fopen("produkcja", "w");
+    if (produkcja == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    //************************************************
+
+    char znak; int ilosc_znakow;
+    ilosc_znakow = 0;
+    znak = fgetc(surowce);
+    while(znak != EOF)
+    {
+        //Obsługa wczytanego znaku
+        ilosc_znakow++;
+        printf("%d : ASCII=%d\n", ilosc_znakow, znak);
+        //************************
+
+        //Zapis znaku do bufora
+        towar = fopen("towar", "w");
+        if (towar == NULL)
+        {
+            perror("fopen()");
+            exit(1);
+        }
+        fputc(znak, towar);
+        if (fclose(towar) == EOF)
+        {
+            perror("fclose()");
+            exit(1);
+        }
+        //*********************
+
+        //Dołączenie znaku do całkowitej produkcji (pliku "produkcja")
+        fputc(znak, produkcja);
+        //************************************************************
+
+        //Pobranie nowego znaku
+        znak = fgetc(surowce);
+        //*********************
+    }
+
+    if (fclose(surowce) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    if (fclose(produkcja) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    return 0;
+}
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    FILE *surowce, *produkcja, *towar;
+
+    //Otwarcie plików roboczych "surowce", "produkcja"
+    surowce = fopen("surowce", "r");
+    if (surowce == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    produkcja = fopen("produkcja", "w");
+    if (produkcja == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    //************************************************
+
+    char znak; int ilosc_znakow;
+    ilosc_znakow = 0;
+    znak = fgetc(surowce);
+    while(znak != EOF)
+    {
+        //Obsługa wczytanego znaku
+        ilosc_znakow++;
+        printf("%d : ASCII=%d\n", ilosc_znakow, znak);
+        //************************
+
+        //Zapis znaku do bufora
+        towar = fopen("towar", "w");
+        if (towar == NULL)
+        {
+            perror("fopen()");
+            exit(1);
+        }
+        fputc(znak, towar);
+        if (fclose(towar) == EOF)
+        {
+            perror("fclose()");
+            exit(1);
+        }
+        //*********************
+
+        //Dołączenie znaku do całkowitej produkcji (pliku "produkcja")
+        fputc(znak, produkcja);
+        //************************************************************
+
+        //Pobranie nowego znaku
+        znak = fgetc(surowce);
+        //*********************
+    }
+
+    if (fclose(surowce) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    if (fclose(produkcja) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    return 0;
+}
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    FILE *surowce, *produkcja, *towar;
+
+    //Otwarcie plików roboczych "surowce", "produkcja"
+    surowce = fopen("surowce", "r");
+    if (surowce == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    produkcja = fopen("produkcja", "w");
+    if (produkcja == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    //************************************************
+
+    char znak; int ilosc_znakow;
+    ilosc_znakow = 0;
+    znak = fgetc(surowce);
+    while(znak != EOF)
+    {
+        //Obsługa wczytanego znaku
+        ilosc_znakow++;
+        printf("%d : ASCII=%d\n", ilosc_znakow, znak);
+        //************************
+
+        //Zapis znaku do bufora
+        towar = fopen("towar", "w");
+        if (towar == NULL)
+        {
+            perror("fopen()");
+            exit(1);
+        }
+        fputc(znak, towar);
+        if (fclose(towar) == EOF)
+        {
+            perror("fclose()");
+            exit(1);
+        }
+        //*********************
+
+        //Dołączenie znaku do całkowitej produkcji (pliku "produkcja")
+        fputc(znak, produkcja);
+        //************************************************************
+
+        //Pobranie nowego znaku
+        znak = fgetc(surowce);
+        //*********************
+    }
+
+    if (fclose(surowce) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    if (fclose(produkcja) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    return 0;
+}
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    FILE *surowce, *produkcja, *towar;
+
+    //Otwarcie plików roboczych "surowce", "produkcja"
+    surowce = fopen("surowce", "r");
+    if (surowce == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    produkcja = fopen("produkcja", "w");
+    if (produkcja == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    //************************************************
+
+    char znak; int ilosc_znakow;
+    ilosc_znakow = 0;
+    znak = fgetc(surowce);
+    while(znak != EOF)
+    {
+        //Obsługa wczytanego znaku
+        ilosc_znakow++;
+        printf("%d : ASCII=%d\n", ilosc_znakow, znak);
+        //************************
+
+        //Zapis znaku do bufora
+        towar = fopen("towar", "w");
+        if (towar == NULL)
+        {
+            perror("fopen()");
+            exit(1);
+        }
+        fputc(znak, towar);
+        if (fclose(towar) == EOF)
+        {
+            perror("fclose()");
+            exit(1);
+        }
+        //*********************
+
+        //Dołączenie znaku do całkowitej produkcji (pliku "produkcja")
+        fputc(znak, produkcja);
+        //************************************************************
+
+        //Pobranie nowego znaku
+        znak = fgetc(surowce);
+        //*********************
+    }
+
+    if (fclose(surowce) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    if (fclose(produkcja) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    return 0;
+}
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    FILE *surowce, *produkcja, *towar;
+
+    //Otwarcie plików roboczych "surowce", "produkcja"
+    surowce = fopen("surowce", "r");
+    if (surowce == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    produkcja = fopen("produkcja", "w");
+    if (produkcja == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    //************************************************
+
+    char znak; int ilosc_znakow;
+    ilosc_znakow = 0;
+    znak = fgetc(surowce);
+    while(znak != EOF)
+    {
+        //Obsługa wczytanego znaku
+        ilosc_znakow++;
+        printf("%d : ASCII=%d\n", ilosc_znakow, znak);
+        //************************
+
+        //Zapis znaku do bufora
+        towar = fopen("towar", "w");
+        if (towar == NULL)
+        {
+            perror("fopen()");
+            exit(1);
+        }
+        fputc(znak, towar);
+        if (fclose(towar) == EOF)
+        {
+            perror("fclose()");
+            exit(1);
+        }
+        //*********************
+
+        //Dołączenie znaku do całkowitej produkcji (pliku "produkcja")
+        fputc(znak, produkcja);
+        //************************************************************
+
+        //Pobranie nowego znaku
+        znak = fgetc(surowce);
+        //*********************
+    }
+
+    if (fclose(surowce) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    if (fclose(produkcja) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    return 0;
+}
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    FILE *surowce, *produkcja, *towar;
+
+    //Otwarcie plików roboczych "surowce", "produkcja"
+    surowce = fopen("surowce", "r");
+    if (surowce == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    produkcja = fopen("produkcja", "w");
+    if (produkcja == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    //************************************************
+
+    char znak; int ilosc_znakow;
+    ilosc_znakow = 0;
+    znak = fgetc(surowce);
+    while(znak != EOF)
+    {
+        //Obsługa wczytanego znaku
+        ilosc_znakow++;
+        printf("%d : ASCII=%d\n", ilosc_znakow, znak);
+        //************************
+
+        //Zapis znaku do bufora
+        towar = fopen("towar", "w");
+        if (towar == NULL)
+        {
+            perror("fopen()");
+            exit(1);
+        }
+        fputc(znak, towar);
+        if (fclose(towar) == EOF)
+        {
+            perror("fclose()");
+            exit(1);
+        }
+        //*********************
+
+        //Dołączenie znaku do całkowitej produkcji (pliku "produkcja")
+        fputc(znak, produkcja);
+        //************************************************************
+
+        //Pobranie nowego znaku
+        znak = fgetc(surowce);
+        //*********************
+    }
+
+    if (fclose(surowce) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    if (fclose(produkcja) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    return 0;
+}
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    FILE *surowce, *produkcja, *towar;
+
+    //Otwarcie plików roboczych "surowce", "produkcja"
+    surowce = fopen("surowce", "r");
+    if (surowce == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    produkcja = fopen("produkcja", "w");
+    if (produkcja == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    //************************************************
+
+    char znak; int ilosc_znakow;
+    ilosc_znakow = 0;
+    znak = fgetc(surowce);
+    while(znak != EOF)
+    {
+        //Obsługa wczytanego znaku
+        ilosc_znakow++;
+        printf("%d : ASCII=%d\n", ilosc_znakow, znak);
+        //************************
+
+        //Zapis znaku do bufora
+        towar = fopen("towar", "w");
+        if (towar == NULL)
+        {
+            perror("fopen()");
+            exit(1);
+        }
+        fputc(znak, towar);
+        if (fclose(towar) == EOF)
+        {
+            perror("fclose()");
+            exit(1);
+        }
+        //*********************
+
+        //Dołączenie znaku do całkowitej produkcji (pliku "produkcja")
+        fputc(znak, produkcja);
+        //************************************************************
+
+        //Pobranie nowego znaku
+        znak = fgetc(surowce);
+        //*********************
+    }
+
+    if (fclose(surowce) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    if (fclose(produkcja) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    return 0;
+}
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    FILE *surowce, *produkcja, *towar;
+
+    //Otwarcie plików roboczych "surowce", "produkcja"
+    surowce = fopen("surowce", "r");
+    if (surowce == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    produkcja = fopen("produkcja", "w");
+    if (produkcja == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    //************************************************
+
+    char znak; int ilosc_znakow;
+    ilosc_znakow = 0;
+    znak = fgetc(surowce);
+    while(znak != EOF)
+    {
+        //Obsługa wczytanego znaku
+        ilosc_znakow++;
+        printf("%d : ASCII=%d\n", ilosc_znakow, znak);
+        //************************
+
+        //Zapis znaku do bufora
+        towar = fopen("towar", "w");
+        if (towar == NULL)
+        {
+            perror("fopen()");
+            exit(1);
+        }
+        fputc(znak, towar);
+        if (fclose(towar) == EOF)
+        {
+            perror("fclose()");
+            exit(1);
+        }
+        //*********************
+
+        //Dołączenie znaku do całkowitej produkcji (pliku "produkcja")
+        fputc(znak, produkcja);
+        //************************************************************
+
+        //Pobranie nowego znaku
+        znak = fgetc(surowce);
+        //*********************
+    }
+
+    if (fclose(surowce) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    if (fclose(produkcja) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    return 0;
+}
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    FILE *surowce, *produkcja, *towar;
+
+    //Otwarcie plików roboczych "surowce", "produkcja"
+    surowce = fopen("surowce", "r");
+    if (surowce == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    produkcja = fopen("produkcja", "w");
+    if (produkcja == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    //************************************************
+
+    char znak; int ilosc_znakow;
+    ilosc_znakow = 0;
+    znak = fgetc(surowce);
+    while(znak != EOF)
+    {
+        //Obsługa wczytanego znaku
+        ilosc_znakow++;
+        printf("%d : ASCII=%d\n", ilosc_znakow, znak);
+        //************************
+
+        //Zapis znaku do bufora
+        towar = fopen("towar", "w");
+        if (towar == NULL)
+        {
+            perror("fopen()");
+            exit(1);
+        }
+        fputc(znak, towar);
+        if (fclose(towar) == EOF)
+        {
+            perror("fclose()");
+            exit(1);
+        }
+        //*********************
+
+        //Dołączenie znaku do całkowitej produkcji (pliku "produkcja")
+        fputc(znak, produkcja);
+        //************************************************************
+
+        //Pobranie nowego znaku
+        znak = fgetc(surowce);
+        //*********************
+    }
+
+    if (fclose(surowce) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    if (fclose(produkcja) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    return 0;
+}
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    FILE *surowce, *produkcja, *towar;
+
+    //Otwarcie plików roboczych "surowce", "produkcja"
+    surowce = fopen("surowce", "r");
+    if (surowce == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    produkcja = fopen("produkcja", "w");
+    if (produkcja == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    //************************************************
+
+    char znak; int ilosc_znakow;
+    ilosc_znakow = 0;
+    znak = fgetc(surowce);
+    while(znak != EOF)
+    {
+        //Obsługa wczytanego znaku
+        ilosc_znakow++;
+        printf("%d : ASCII=%d\n", ilosc_znakow, znak);
+        //************************
+
+        //Zapis znaku do bufora
+        towar = fopen("towar", "w");
+        if (towar == NULL)
+        {
+            perror("fopen()");
+            exit(1);
+        }
+        fputc(znak, towar);
+        if (fclose(towar) == EOF)
+        {
+            perror("fclose()");
+            exit(1);
+        }
+        //*********************
+
+        //Dołączenie znaku do całkowitej produkcji (pliku "produkcja")
+        fputc(znak, produkcja);
+        //************************************************************
+
+        //Pobranie nowego znaku
+        znak = fgetc(surowce);
+        //*********************
+    }
+
+    if (fclose(surowce) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    if (fclose(produkcja) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    return 0;
+}
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    FILE *surowce, *produkcja, *towar;
+
+    //Otwarcie plików roboczych "surowce", "produkcja"
+    surowce = fopen("surowce", "r");
+    if (surowce == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    produkcja = fopen("produkcja", "w");
+    if (produkcja == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    //************************************************
+
+    char znak; int ilosc_znakow;
+    ilosc_znakow = 0;
+    znak = fgetc(surowce);
+    while(znak != EOF)
+    {
+        //Obsługa wczytanego znaku
+        ilosc_znakow++;
+        printf("%d : ASCII=%d\n", ilosc_znakow, znak);
+        //************************
+
+        //Zapis znaku do bufora
+        towar = fopen("towar", "w");
+        if (towar == NULL)
+        {
+            perror("fopen()");
+            exit(1);
+        }
+        fputc(znak, towar);
+        if (fclose(towar) == EOF)
+        {
+            perror("fclose()");
+            exit(1);
+        }
+        //*********************
+
+        //Dołączenie znaku do całkowitej produkcji (pliku "produkcja")
+        fputc(znak, produkcja);
+        //************************************************************
+
+        //Pobranie nowego znaku
+        znak = fgetc(surowce);
+        //*********************
+    }
+
+    if (fclose(surowce) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    if (fclose(produkcja) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    return 0;
+}
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    FILE *surowce, *produkcja, *towar;
+
+    //Otwarcie plików roboczych "surowce", "produkcja"
+    surowce = fopen("surowce", "r");
+    if (surowce == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    produkcja = fopen("produkcja", "w");
+    if (produkcja == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    //************************************************
+
+    char znak; int ilosc_znakow;
+    ilosc_znakow = 0;
+    znak = fgetc(surowce);
+    while(znak != EOF)
+    {
+        //Obsługa wczytanego znaku
+        ilosc_znakow++;
+        printf("%d : ASCII=%d\n", ilosc_znakow, znak);
+        //************************
+
+        //Zapis znaku do bufora
+        towar = fopen("towar", "w");
+        if (towar == NULL)
+        {
+            perror("fopen()");
+            exit(1);
+        }
+        fputc(znak, towar);
+        if (fclose(towar) == EOF)
+        {
+            perror("fclose()");
+            exit(1);
+        }
+        //*********************
+
+        //Dołączenie znaku do całkowitej produkcji (pliku "produkcja")
+        fputc(znak, produkcja);
+        //************************************************************
+
+        //Pobranie nowego znaku
+        znak = fgetc(surowce);
+        //*********************
+    }
+
+    if (fclose(surowce) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    if (fclose(produkcja) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    return 0;
+}
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    FILE *surowce, *produkcja, *towar;
+
+    //Otwarcie plików roboczych "surowce", "produkcja"
+    surowce = fopen("surowce", "r");
+    if (surowce == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    produkcja = fopen("produkcja", "w");
+    if (produkcja == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    //************************************************
+
+    char znak; int ilosc_znakow;
+    ilosc_znakow = 0;
+    znak = fgetc(surowce);
+    while(znak != EOF)
+    {
+        //Obsługa wczytanego znaku
+        ilosc_znakow++;
+        printf("%d : ASCII=%d\n", ilosc_znakow, znak);
+        //************************
+
+        //Zapis znaku do bufora
+        towar = fopen("towar", "w");
+        if (towar == NULL)
+        {
+            perror("fopen()");
+            exit(1);
+        }
+        fputc(znak, towar);
+        if (fclose(towar) == EOF)
+        {
+            perror("fclose()");
+            exit(1);
+        }
+        //*********************
+
+        //Dołączenie znaku do całkowitej produkcji (pliku "produkcja")
+        fputc(znak, produkcja);
+        //************************************************************
+
+        //Pobranie nowego znaku
+        znak = fgetc(surowce);
+        //*********************
+    }
+
+    if (fclose(surowce) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    if (fclose(produkcja) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    return 0;
+}
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    FILE *surowce, *produkcja, *towar;
+
+    //Otwarcie plików roboczych "surowce", "produkcja"
+    surowce = fopen("surowce", "r");
+    if (surowce == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    produkcja = fopen("produkcja", "w");
+    if (produkcja == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    //************************************************
+
+    char znak; int ilosc_znakow;
+    ilosc_znakow = 0;
+    znak = fgetc(surowce);
+    while(znak != EOF)
+    {
+        //Obsługa wczytanego znaku
+        ilosc_znakow++;
+        printf("%d : ASCII=%d\n", ilosc_znakow, znak);
+        //************************
+
+        //Zapis znaku do bufora
+        towar = fopen("towar", "w");
+        if (towar == NULL)
+        {
+            perror("fopen()");
+            exit(1);
+        }
+        fputc(znak, towar);
+        if (fclose(towar) == EOF)
+        {
+            perror("fclose()");
+            exit(1);
+        }
+        //*********************
+
+        //Dołączenie znaku do całkowitej produkcji (pliku "produkcja")
+        fputc(znak, produkcja);
+        //************************************************************
+
+        //Pobranie nowego znaku
+        znak = fgetc(surowce);
+        //*********************
+    }
+
+    if (fclose(surowce) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    if (fclose(produkcja) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    return 0;
+}
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    FILE *surowce, *produkcja, *towar;
+
+    //Otwarcie plików roboczych "surowce", "produkcja"
+    surowce = fopen("surowce", "r");
+    if (surowce == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    produkcja = fopen("produkcja", "w");
+    if (produkcja == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    //************************************************
+
+    char znak; int ilosc_znakow;
+    ilosc_znakow = 0;
+    znak = fgetc(surowce);
+    while(znak != EOF)
+    {
+        //Obsługa wczytanego znaku
+        ilosc_znakow++;
+        printf("%d : ASCII=%d\n", ilosc_znakow, znak);
+        //************************
+
+        //Zapis znaku do bufora
+        towar = fopen("towar", "w");
+        if (towar == NULL)
+        {
+            perror("fopen()");
+            exit(1);
+        }
+        fputc(znak, towar);
+        if (fclose(towar) == EOF)
+        {
+            perror("fclose()");
+            exit(1);
+        }
+        //*********************
+
+        //Dołączenie znaku do całkowitej produkcji (pliku "produkcja")
+        fputc(znak, produkcja);
+        //************************************************************
+
+        //Pobranie nowego znaku
+        znak = fgetc(surowce);
+        //*********************
+    }
+
+    if (fclose(surowce) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    if (fclose(produkcja) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    return 0;
+}
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    FILE *surowce, *produkcja, *towar;
+
+    //Otwarcie plików roboczych "surowce", "produkcja"
+    surowce = fopen("surowce", "r");
+    if (surowce == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    produkcja = fopen("produkcja", "w");
+    if (produkcja == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    //************************************************
+
+    char znak; int ilosc_znakow;
+    ilosc_znakow = 0;
+    znak = fgetc(surowce);
+    while(znak != EOF)
+    {
+        //Obsługa wczytanego znaku
+        ilosc_znakow++;
+        printf("%d : ASCII=%d\n", ilosc_znakow, znak);
+        //************************
+
+        //Zapis znaku do bufora
+        towar = fopen("towar", "w");
+        if (towar == NULL)
+        {
+            perror("fopen()");
+            exit(1);
+        }
+        fputc(znak, towar);
+        if (fclose(towar) == EOF)
+        {
+            perror("fclose()");
+            exit(1);
+        }
+        //*********************
+
+        //Dołączenie znaku do całkowitej produkcji (pliku "produkcja")
+        fputc(znak, produkcja);
+        //************************************************************
+
+        //Pobranie nowego znaku
+        znak = fgetc(surowce);
+        //*********************
+    }
+
+    if (fclose(surowce) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    if (fclose(produkcja) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    return 0;
+}
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    FILE *surowce, *produkcja, *towar;
+
+    //Otwarcie plików roboczych "surowce", "produkcja"
+    surowce = fopen("surowce", "r");
+    if (surowce == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    produkcja = fopen("produkcja", "w");
+    if (produkcja == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    //************************************************
+
+    char znak; int ilosc_znakow;
+    ilosc_znakow = 0;
+    znak = fgetc(surowce);
+    while(znak != EOF)
+    {
+        //Obsługa wczytanego znaku
+        ilosc_znakow++;
+        printf("%d : ASCII=%d\n", ilosc_znakow, znak);
+        //************************
+
+        //Zapis znaku do bufora
+        towar = fopen("towar", "w");
+        if (towar == NULL)
+        {
+            perror("fopen()");
+            exit(1);
+        }
+        fputc(znak, towar);
+        if (fclose(towar) == EOF)
+        {
+            perror("fclose()");
+            exit(1);
+        }
+        //*********************
+
+        //Dołączenie znaku do całkowitej produkcji (pliku "produkcja")
+        fputc(znak, produkcja);
+        //************************************************************
+
+        //Pobranie nowego znaku
+        znak = fgetc(surowce);
+        //*********************
+    }
+
+    if (fclose(surowce) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    if (fclose(produkcja) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    return 0;
+}
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    FILE *surowce, *produkcja, *towar;
+
+    //Otwarcie plików roboczych "surowce", "produkcja"
+    surowce = fopen("surowce", "r");
+    if (surowce == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    produkcja = fopen("produkcja", "w");
+    if (produkcja == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    //************************************************
+
+    char znak; int ilosc_znakow;
+    ilosc_znakow = 0;
+    znak = fgetc(surowce);
+    while(znak != EOF)
+    {
+        //Obsługa wczytanego znaku
+        ilosc_znakow++;
+        printf("%d : ASCII=%d\n", ilosc_znakow, znak);
+        //************************
+
+        //Zapis znaku do bufora
+        towar = fopen("towar", "w");
+        if (towar == NULL)
+        {
+            perror("fopen()");
+            exit(1);
+        }
+        fputc(znak, towar);
+        if (fclose(towar) == EOF)
+        {
+            perror("fclose()");
+            exit(1);
+        }
+        //*********************
+
+        //Dołączenie znaku do całkowitej produkcji (pliku "produkcja")
+        fputc(znak, produkcja);
+        //************************************************************
+
+        //Pobranie nowego znaku
+        znak = fgetc(surowce);
+        //*********************
+    }
+
+    if (fclose(surowce) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    if (fclose(produkcja) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    return 0;
+}
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    FILE *surowce, *produkcja, *towar;
+
+    //Otwarcie plików roboczych "surowce", "produkcja"
+    surowce = fopen("surowce", "r");
+    if (surowce == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    produkcja = fopen("produkcja", "w");
+    if (produkcja == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    //************************************************
+
+    char znak; int ilosc_znakow;
+    ilosc_znakow = 0;
+    znak = fgetc(surowce);
+    while(znak != EOF)
+    {
+        //Obsługa wczytanego znaku
+        ilosc_znakow++;
+        printf("%d : ASCII=%d\n", ilosc_znakow, znak);
+        //************************
+
+        //Zapis znaku do bufora
+        towar = fopen("towar", "w");
+        if (towar == NULL)
+        {
+            perror("fopen()");
+            exit(1);
+        }
+        fputc(znak, towar);
+        if (fclose(towar) == EOF)
+        {
+            perror("fclose()");
+            exit(1);
+        }
+        //*********************
+
+        //Dołączenie znaku do całkowitej produkcji (pliku "produkcja")
+        fputc(znak, produkcja);
+        //************************************************************
+
+        //Pobranie nowego znaku
+        znak = fgetc(surowce);
+        //*********************
+    }
+
+    if (fclose(surowce) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    if (fclose(produkcja) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    return 0;
+}
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    FILE *surowce, *produkcja, *towar;
+
+    //Otwarcie plików roboczych "surowce", "produkcja"
+    surowce = fopen("surowce", "r");
+    if (surowce == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    produkcja = fopen("produkcja", "w");
+    if (produkcja == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    //************************************************
+
+    char znak; int ilosc_znakow;
+    ilosc_znakow = 0;
+    znak = fgetc(surowce);
+    while(znak != EOF)
+    {
+        //Obsługa wczytanego znaku
+        ilosc_znakow++;
+        printf("%d : ASCII=%d\n", ilosc_znakow, znak);
+        //************************
+
+        //Zapis znaku do bufora
+        towar = fopen("towar", "w");
+        if (towar == NULL)
+        {
+            perror("fopen()");
+            exit(1);
+        }
+        fputc(znak, towar);
+        if (fclose(towar) == EOF)
+        {
+            perror("fclose()");
+            exit(1);
+        }
+        //*********************
+
+        //Dołączenie znaku do całkowitej produkcji (pliku "produkcja")
+        fputc(znak, produkcja);
+        //************************************************************
+
+        //Pobranie nowego znaku
+        znak = fgetc(surowce);
+        //*********************
+    }
+
+    if (fclose(surowce) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    if (fclose(produkcja) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    return 0;
+}
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    FILE *surowce, *produkcja, *towar;
+
+    //Otwarcie plików roboczych "surowce", "produkcja"
+    surowce = fopen("surowce", "r");
+    if (surowce == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    produkcja = fopen("produkcja", "w");
+    if (produkcja == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    //************************************************
+
+    char znak; int ilosc_znakow;
+    ilosc_znakow = 0;
+    znak = fgetc(surowce);
+    while(znak != EOF)
+    {
+        //Obsługa wczytanego znaku
+        ilosc_znakow++;
+        printf("%d : ASCII=%d\n", ilosc_znakow, znak);
+        //************************
+
+        //Zapis znaku do bufora
+        towar = fopen("towar", "w");
+        if (towar == NULL)
+        {
+            perror("fopen()");
+            exit(1);
+        }
+        fputc(znak, towar);
+        if (fclose(towar) == EOF)
+        {
+            perror("fclose()");
+            exit(1);
+        }
+        //*********************
+
+        //Dołączenie znaku do całkowitej produkcji (pliku "produkcja")
+        fputc(znak, produkcja);
+        //************************************************************
+
+        //Pobranie nowego znaku
+        znak = fgetc(surowce);
+        //*********************
+    }
+
+    if (fclose(surowce) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    if (fclose(produkcja) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    return 0;
+}
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    FILE *surowce, *produkcja, *towar;
+
+    //Otwarcie plików roboczych "surowce", "produkcja"
+    surowce = fopen("surowce", "r");
+    if (surowce == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    produkcja = fopen("produkcja", "w");
+    if (produkcja == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    //************************************************
+
+    char znak; int ilosc_znakow;
+    ilosc_znakow = 0;
+    znak = fgetc(surowce);
+    while(znak != EOF)
+    {
+        //Obsługa wczytanego znaku
+        ilosc_znakow++;
+        printf("%d : ASCII=%d\n", ilosc_znakow, znak);
+        //************************
+
+        //Zapis znaku do bufora
+        towar = fopen("towar", "w");
+        if (towar == NULL)
+        {
+            perror("fopen()");
+            exit(1);
+        }
+        fputc(znak, towar);
+        if (fclose(towar) == EOF)
+        {
+            perror("fclose()");
+            exit(1);
+        }
+        //*********************
+
+        //Dołączenie znaku do całkowitej produkcji (pliku "produkcja")
+        fputc(znak, produkcja);
+        //************************************************************
+
+        //Pobranie nowego znaku
+        znak = fgetc(surowce);
+        //*********************
+    }
+
+    if (fclose(surowce) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    if (fclose(produkcja) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    return 0;
+}
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    FILE *surowce, *produkcja, *towar;
+
+    //Otwarcie plików roboczych "surowce", "produkcja"
+    surowce = fopen("surowce", "r");
+    if (surowce == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    produkcja = fopen("produkcja", "w");
+    if (produkcja == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    //************************************************
+
+    char znak; int ilosc_znakow;
+    ilosc_znakow = 0;
+    znak = fgetc(surowce);
+    while(znak != EOF)
+    {
+        //Obsługa wczytanego znaku
+        ilosc_znakow++;
+        printf("%d : ASCII=%d\n", ilosc_znakow, znak);
+        //************************
+
+        //Zapis znaku do bufora
+        towar = fopen("towar", "w");
+        if (towar == NULL)
+        {
+            perror("fopen()");
+            exit(1);
+        }
+        fputc(znak, towar);
+        if (fclose(towar) == EOF)
+        {
+            perror("fclose()");
+            exit(1);
+        }
+        //*********************
+
+        //Dołączenie znaku do całkowitej produkcji (pliku "produkcja")
+        fputc(znak, produkcja);
+        //************************************************************
+
+        //Pobranie nowego znaku
+        znak = fgetc(surowce);
+        //*********************
+    }
+
+    if (fclose(surowce) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    if (fclose(produkcja) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    return 0;
+}
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    FILE *surowce, *produkcja, *towar;
+
+    //Otwarcie plików roboczych "surowce", "produkcja"
+    surowce = fopen("surowce", "r");
+    if (surowce == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    produkcja = fopen("produkcja", "w");
+    if (produkcja == NULL)
+    {
+        perror("fopen()");
+        exit(1);
+    }
+    //************************************************
+
+    char znak; int ilosc_znakow;
+    ilosc_znakow = 0;
+    znak = fgetc(surowce);
+    while(znak != EOF)
+    {
+        //Obsługa wczytanego znaku
+        ilosc_znakow++;
+        printf("%d : ASCII=%d\n", ilosc_znakow, znak);
+        //************************
+
+        //Zapis znaku do bufora
+        towar = fopen("towar", "w");
+        if (towar == NULL)
+        {
+            perror("fopen()");
+            exit(1);
+        }
+        fputc(znak, towar);
+        if (fclose(towar) == EOF)
+        {
+            perror("fclose()");
+            exit(1);
+        }
+        //*********************
+
+        //Dołączenie znaku do całkowitej produkcji (pliku "produkcja")
+        fputc(znak, produkcja);
+        //************************************************************
+
+        //Pobranie nowego znaku
+        znak = fgetc(surowce);
+        //*********************
+    }
+
+    if (fclose(surowce) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    if (fclose(produkcja) == EOF)
+    {
+        perror("fclose()");
+        exit(1);
+    }
+    return 0;
+}
